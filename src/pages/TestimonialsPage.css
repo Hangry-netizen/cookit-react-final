@@ -1,0 +1,40 @@
+.testimonial-cards {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center !important;
+}
+
+.h1 {
+  font-size: 180% !important;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
+}
+
+.testimonialspage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/NFOJ7HCOWQI6VFT34B2NGAWH2Q.jpg&w=530) !important;
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 70vh;
+}
+
+.jumbotron {
+  background-color: transparent !important;
+}
+
+.card {
+  background-color: transparent !important;
+}
+
+.CardText {
+  font-size: 200px;
+}

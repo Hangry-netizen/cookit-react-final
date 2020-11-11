@@ -1,0 +1,34 @@
+.footer {
+  color: #888;
+  margin: 0;
+  padding: 0;
+}
+
+.MDBfooter {
+  margin: 0;
+  padding: 0;
+}
+
+.iconify-inline {
+  color: #888;
+}
+
+.footer-copyright {
+  font-size: 20%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.a {
+  display: block;
+}
+*/ .list-unstyled {
+  margin-right: 80%;
+}
+
+
