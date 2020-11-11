@@ -14,6 +14,7 @@ import AddMeal from "./components/AddMeal";
 import MealPage from "./pages/MealPage"
 import FooterPage from "./pages/FooterPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
+import PaymentPage from "./payments/PaymentPages/index";
 
 export const url = "https://cookit-cookit-cookit.herokuapp.com/api/v1";
 
@@ -94,6 +95,7 @@ function App() {
           <Route path = "/admin" render={() => <AdminPage/>} />
           <Route path = "/testimonials" render={() => <TestimonialsPage />} />
           <Route path = "/footer" render={() => <FooterPage />} />
+          <Route path = "/payment" render={() => <PaymentPage />} />
         </Switch>
       </SessionContext.Provider>
     </div>
