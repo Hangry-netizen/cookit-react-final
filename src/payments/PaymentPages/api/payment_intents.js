@@ -1,8 +1,9 @@
+import React from "react";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.REACT_APP_SECRET_KEY)
 
-export default async (req, res) => {
+const Intents = async (req, res) => {
   if (req.method === "POST") {
     try {
       const { amount } = req.body;
@@ -27,3 +28,5 @@ export default async (req, res) => {
     res.status(405).end("Method Not Allowed");
   }
 };
+
+export default Intents
