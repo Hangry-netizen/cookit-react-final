@@ -6,8 +6,8 @@ import Meal from "../containers/Meal";
 import HeaderPage from "./HeaderPage";
 import FooterPage from "./FooterPage";
 import TestimonialsPage from "./TestimonialsPage";
-import IntroductionPage from "../pages/IntroductionPage";
 import HowItWorks from "../pages/HowItWorks";
+import IntroductionPage from "../pages/IntroductionPage";
 
 export default function HomePage() {
   const { meals, setMeals } = useContext(SessionContext);

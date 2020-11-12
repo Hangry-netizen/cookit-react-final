@@ -14,7 +14,9 @@ import {
 export default function Meal({ meal }) {
   let history = useHistory();
 
-  const { loggedIn } = useContext(SessionContext);
+  const { loggedIn, checkoutMeal, setCheckoutMeal, orderMeal } = useContext(
+    SessionContext
+  );
 
   return (
     <div style={{ width: "33vw", padding: "2%" }}>
@@ -34,7 +36,13 @@ export default function Meal({ meal }) {
             {meal.cookware}
           </CardText>
           {loggedIn ? (
-            <Button onClick={() => history.push(`/meal/${meal.id}`)}>
+            <Button
+              onClick={() => {
+                console.log("test");
+                history.push(`/meal/${meal.id}`);
+                setCheckoutMeal(meal);
+              }}
+            >
               Order now
             </Button>
           ) : (

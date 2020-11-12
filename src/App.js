@@ -11,7 +11,7 @@ import AdminLogin from "./components/AdminLogin";
 import AdminPage from "./pages/AdminPage";
 import AdminSignUp from "./components/AdminSignUp";
 import AddMeal from "./components/AddMeal";
-import MealPage from "./pages/MealPage"
+import MealPage from "./pages/MealPage";
 import FooterPage from "./pages/FooterPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import PaymentPage from "./payments/PaymentPage";
@@ -28,6 +28,7 @@ function App() {
   const [adminLoggedIn, setAdminLoggedIn] = useState(localStorage.jwtAdmin);
   const [showAdminSignUpModal, setShowAdminSignUpModal] = useState(false);
   const [meals, setMeals] = useState([]);
+  const [checkoutMeal, setCheckoutMeal] = useState([]);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
   const [showAdminModal, setShowAdminModal] = useState(false);
@@ -43,8 +44,13 @@ function App() {
   const toggleSignUp = () => setSignUp(!signUp);
   const toggleAdminModal = () => setShowAdminModal(!showAdminModal);
   const toggleAdminLogin = () => setAdminLoggedIn(!adminLoggedIn);
-  const toggleAdminSignUpModal = () => setShowAdminSignUpModal(!showAdminSignUpModal);
+  const toggleAdminSignUpModal = () =>
+    setShowAdminSignUpModal(!showAdminSignUpModal);
   const toggleShowAddMealModal = () => setShowAddMealModal(!showAddMealModal);
+  // const orderMeal = (meal) => {
+  //   history.push(`/meal/${meal.id}`);
+  //   setCheckoutMeal(meal);
+  // };
 
   return (
     <div className="main">
@@ -66,6 +72,8 @@ function App() {
           showLoginModal,
           showSignUpModal,
           toggleLoginModal,
+          checkoutMeal,
+          setCheckoutMeal,
           meals,
           setMeals,
           toggleAdminModal,
@@ -88,14 +96,14 @@ function App() {
         }}
       >
         <Navbar />
-  
+
         <Switch>
-          <Route exact path = "/" render={() => <HomePage />} />
-          <Route path = "/meal/:id" render={() => <MealPage/>} />
-          <Route path = "/admin" render={() => <AdminPage/>} />
-          <Route path = "/testimonials" render={() => <TestimonialsPage />} />
-          <Route path = "/footer" render={() => <FooterPage />} />
-          <Route path = "/payment" render={() => <PaymentPage />} />
+          <Route exact path="/" render={() => <HomePage />} />
+          <Route path="/meal/:id" render={() => <MealPage />} />
+          <Route path="/admin" render={() => <AdminPage />} />
+          <Route path="/testimonials" render={() => <TestimonialsPage />} />
+          <Route path="/footer" render={() => <FooterPage />} />
+          <Route path="/payment" render={() => <PaymentPage />} />
         </Switch>
       </SessionContext.Provider>
     </div>
