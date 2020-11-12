@@ -8,6 +8,7 @@ import FooterPage from "./FooterPage";
 import TestimonialsPage from "./TestimonialsPage";
 import IntroductionPage from "../pages/IntroductionPage";
 import HowItWorks from "../pages/HowItWorks";
+import UpdateHowItWorks from "../pages/UpdateHowItWorks";
 
 export default function HomePage() {
   const { meals, setMeals } = useContext(SessionContext);
@@ -31,7 +32,7 @@ export default function HomePage() {
     <div style={{ height: "100vh", width: "100vw" }}>
       <HeaderPage />
       <IntroductionPage />
-      <HowItWorks />
+      <UpdateHowItWorks />
       <TestimonialsPage />
       <div
         style={{

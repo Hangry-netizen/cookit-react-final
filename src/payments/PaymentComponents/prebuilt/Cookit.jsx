@@ -1,8 +1,8 @@
+import React from "react";
 import styled from "@emotion/styled";
-
 import Image from "./Image";
 import MealQuantity from "./MealQuantity";
-import logo from "../../utils/logo.png"
+import logo from "../../utils/logo.png";
 
 const Shop = styled.div`
   padding: 10px 20px 40px 20px;

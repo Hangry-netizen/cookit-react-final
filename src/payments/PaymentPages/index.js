@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import Router from "next/router";
 
@@ -7,11 +8,11 @@ import Cookit from "../PaymentComponents/prebuilt/Cookit";
 import CheckoutForm from "../PaymentComponents/CheckoutForm";
 import getMealPrice from "../utils/get-meal-price";
 
-const PaymentPage = props => {
+const PaymentPage = (props) => {
   const [numMeals, setNumMeals] = useState(1);
 
-  const addMeal = () => setNumMeals(num => Math.min(12, num + 1));
-  const remMeal = () => setNumMeals(num => Math.max(1, num - 1));
+  const addMeal = () => setNumMeals((num) => Math.min(12, num + 1));
+  const remMeal = () => setNumMeals((num) => Math.max(1, num - 1));
 
   return (
     <Layout title="Cookit Cart">
