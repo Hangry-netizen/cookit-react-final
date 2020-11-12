@@ -75,7 +75,7 @@ export default function IntroductionPage() {
                 In less than 30 minutes you could have access to ingredients
                 that will provide you with a healthy mix of nutrients and
                 amazing tastes. We work with the best suppliers of local organic
-                providers in each area we operate. To ensure your maximum
+                goods in each area we operate. To ensure your maximum
                 satisfaction.
               </CardText>
             </CardBody>
@@ -115,9 +115,15 @@ export default function IntroductionPage() {
                 data-icon="fxemoji:deliverytruck"
                 data-inline="false"
               ></span>
+              <span
+                class="iconify"
+                data-icon="emojione:star"
+                data-inline="false"
+              ></span>
+
               <CardText style={{ textAlign: "left" }}>
                 Never buy ingredients again! We really mean that. Our service
-                include daily coverage. You can also choose to order more
+                includes daily coverage. You can also choose to order more
                 flexibly if that's your style.
               </CardText>
             </CardBody>

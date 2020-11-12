@@ -87,10 +87,10 @@ const TestimonialsPage = (props) => {
                   <CardTitle tag="h5">Nicky Houston</CardTitle>
 
                   <CardText>
-                    "While I looked for a quick and easy ways to prepare
-                    healthy, delciouse and reasonable priced meals I found
-                    Cookit. The only such service in Malaysia. Can't wait to try
-                    the new recipes next month!"
+                    "While I looked for quick and easy ways to prepare healthy,
+                    delciouse and reasonable priced meals I found Cookit. The
+                    only such service in Malaysia. Can't wait to try the new
+                    recipes next month!"
                   </CardText>
                 </CardBody>
               </Card>
