@@ -3,6 +3,7 @@ import React from "react";
 import user1 from "../assets/1_testimonials_user.jpeg";
 import user2 from "../assets/2_testimonials_user.jpeg";
 import user3 from "../assets/3_testimonials_user.jpeg";
+import logo from "../assets/logo.png";
 
 import {
   Jumbotron,
@@ -18,10 +19,13 @@ import {
 
 export default function UpdateTestimonialPage() {
   return (
-    <div className="testimonialspage">
-      <h3 style={{ paddingTop: "4%" }} className="display-5">
+    <div style={{ textAlign: "center" }} className="testimonialspage">
+      <h2
+        style={{ paddingTop: "1%", paddingBottom: "2%" }}
+        className="display-5"
+      >
         Why our customers love us
-      </h3>
+      </h2>
 
       <Container
         style={{

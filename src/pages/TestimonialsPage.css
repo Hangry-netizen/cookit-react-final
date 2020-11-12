@@ -1,11 +1,4 @@
 .testimonial-cards {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center !important;
-}
-
-.h1 {
-  font-size: 180% !important;
 }
 
 .img {
@@ -24,7 +17,6 @@
   background-attachment: fixed;
   margin-bottom: 0;
   padding-bottom: 0;
-  height: 70vh;
 }
 
 .jumbotron {

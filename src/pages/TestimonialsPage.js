@@ -21,7 +21,7 @@ const TestimonialsPage = (props) => {
   return (
     <div className="testimonialspage">
       <Jumbotron style={{ padding: "1%", marginBottom: "0" }}>
-        <Container style={{ textAlign: "center" }} fluid>
+        <Container style={{ textAlign: "center", paddingBottom: "3%" }} fluid>
           <h1 className="h1 display-3">Why our customers love us</h1>
 
           <div className="testimonial-cards">
