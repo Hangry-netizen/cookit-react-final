@@ -45,7 +45,7 @@ function MealPage() {
               {checkoutMeal.cookware}
             </CardText>
 
-            <CardTitle tag="h1">15 MYR/Meal</CardTitle>
+            <CardTitle tag="h1">15 MYR</CardTitle>
             {/* {loggedIn ? (
             <Button
               onClick={() => {

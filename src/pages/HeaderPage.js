@@ -5,7 +5,7 @@ import "./HeaderPage.css";
 
 export default function HeaderPage() {
   return (
-    <div className="header" style={{ height: "90vh", textAlign: "center" }}>
+    <div className="header" style={{ height: "100vh", textAlign: "center" }}>
       <Jumbotron>
         <img style={{ height: "45vh" }} src={logo} />
         <h1 style={{ fontSize: "150%" }}>
