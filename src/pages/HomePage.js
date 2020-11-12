@@ -5,13 +5,20 @@ import SessionContext from "../contexts/SessionContext";
 import Meal from "../containers/Meal";
 import HeaderPage from "./HeaderPage";
 import FooterPage from "./FooterPage";
-import TestimonialsPage from "./TestimonialsPage";
 import HowItWorks from "../pages/HowItWorks";
 import IntroductionPage from "../pages/IntroductionPage";
 import UpdateTestimonialPage from "../pages/UpdateTestimonialPage";
+import { Button } from "reactstrap";
 
 export default function HomePage() {
-  const { meals, setMeals } = useContext(SessionContext);
+  const {
+    meals,
+    setMeals,
+    loggedIn,
+    handleUserLogout,
+    toggleLoginModal,
+    toggleSignUpModal,
+  } = useContext(SessionContext);
 
   useEffect(() => {
     // performing a GET request
@@ -34,7 +41,6 @@ export default function HomePage() {
       <IntroductionPage />
       <HowItWorks />
       <UpdateTestimonialPage />
-      <TestimonialsPage />
       <div
         style={{
           margin: "auto",
@@ -44,6 +50,32 @@ export default function HomePage() {
         <h2 style={{ marginTop: "2%" }}>
           Pick one of our delicious and healthy meals
         </h2>
+        {!loggedIn ? (
+          <Button
+            style={{
+              backgroundColor: "#ff914d",
+              marginRight: "1%",
+              color: "white",
+            }}
+            className="inactive"
+            onClick={toggleLoginModal}
+          >
+            Login
+          </Button>
+        ) : (
+          ""
+        )}
+        {!loggedIn ? (
+          <Button
+            style={{ backgroundColor: "#ff914d", color: "white" }}
+            className="inactive"
+            onClick={toggleSignUpModal}
+          >
+            Sign Up
+          </Button>
+        ) : (
+          ""
+        )}
         <div
           id="meals"
           style={{

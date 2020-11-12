@@ -19,10 +19,10 @@ export default function Meal({ meal }) {
   );
 
   return (
-    <div style={{ width: "33vw", padding: "2%" }}>
+    <div style={{ width: "30vw", padding: "2%" }}>
       <Card>
         <CardImg
-          style={{ height: "200px" }}
+          style={{ height: "30vh" }}
           src={meal.url}
           alt="Card image cap"
         />

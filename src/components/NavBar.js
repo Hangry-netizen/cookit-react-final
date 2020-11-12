@@ -45,10 +45,9 @@ export default function NavBar() {
       <Navbar
         fixed="top"
         style={{
-          borderBottom: "3px solid #555",
           height: "9vh",
-          backgroundColor: "#555",
-          opacity: "0.8",
+          backgroundColor: "#ff914d",
+          opacity: "0.6",
           fontSize: "",
         }}
         expand="md"

@@ -70,8 +70,14 @@ const FooterPage = () => {
           </li>
         </ul>
 
-        <div style={{ textAlign: "center", backgroundColor: "#333" }}>
-          <p>&#169; Copyright 2020 Cookit</p>
+        <div
+          style={{
+            textAlign: "center",
+            backgroundColor: "#333",
+            paddingBottom: "1%",
+          }}
+        >
+          <p style={{ color: "#ff914d" }}>&#169; Copyright 2020 Cookit</p>
         </div>
       </div>
     </div>

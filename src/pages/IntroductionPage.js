@@ -15,7 +15,7 @@ import logo from "../assets/logo.png";
 
 export default function IntroductionPage() {
   return (
-    <div style={{ backgroundColor: "#D0D0D0" }}>
+    <div style={{ backgroundColor: "#F8F8F8" }}>
       <Jumbotron
         style={{ fontColor: "grey" }}
         className="bg-transparent"
