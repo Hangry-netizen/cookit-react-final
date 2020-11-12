@@ -28,8 +28,8 @@ export default function Login({ buttonLabel, className }) {
     toggleAdminLogin,
   } = useContext(SessionContext);
 
-  let history = useHistory()
-  
+  let history = useHistory();
+
   const handleSubmit = (event) => {
     console.log(`Name: ${name}, Password: ${password}`);
     axios({
@@ -47,7 +47,7 @@ export default function Login({ buttonLabel, className }) {
           localStorage.setItem("jwtAdmin", response.data.token);
           toggleAdminModal();
           toggleAdminLogin();
-          history.push('/admin')
+          history.push("/admin");
         }
       })
       .catch((error) => {
@@ -97,7 +97,10 @@ export default function Login({ buttonLabel, className }) {
           </Form>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={() => handleSubmit()}>
+          <Button
+            style={{ backgroundColor: "#ff914d" }}
+            onClick={() => handleSubmit()}
+          >
             Login Admin
           </Button>
           <Button color="secondary" onClick={toggleAdminModal}>

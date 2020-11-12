@@ -24,7 +24,9 @@ function MealPage() {
         style={{ marginTop: "5%" }}
         className="text-center float-md-center"
       >
-        <h1 className="display-3">Order Summary: </h1>
+        <h1 style={{ paddingBottom: "2%" }} className="display-3">
+          Order Summary:{" "}
+        </h1>
 
         <Card style={{ width: "60vw", margin: "auto" }}>
           <CardImg
