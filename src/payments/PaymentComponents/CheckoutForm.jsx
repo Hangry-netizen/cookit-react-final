@@ -9,6 +9,8 @@ import BillingDetailsFields from "./prebuilt/BillingDetailsFields";
 import SubmitButton from "./prebuilt/SubmitButton";
 import CheckoutError from "./prebuilt/CheckoutError";
 
+import Intents from "../PaymentPages/api/payment_intents"
+
 const CardElementContainer = styled.div`
   height: 40px;
   display: flex;
@@ -54,8 +56,8 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
     const cardElement = elements.getElement("card");
 
     try {
-      const { data: clientSecret } = await axios.post("/api/payment_intents", {
-        amount: price * 100,
+      const { data: clientSecret } = await axios.post(Intents(), {
+        amount: price * 100
       });
 
       const paymentMethodReq = await stripe.createPaymentMethod({
