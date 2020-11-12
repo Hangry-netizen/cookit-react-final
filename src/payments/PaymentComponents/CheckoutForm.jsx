@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import styled from "@emotion/styled";
@@ -32,11 +33,11 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
   // use the cardElements onChange prop to add a handler
   // for setting any errors:
 
-  const handleCardDetailsChange = ev => {
+  const handleCardDetailsChange = (ev) => {
     ev.error ? setCheckoutError(ev.error.message) : setCheckoutError();
   };
 
-  const handleFormSubmit = async ev => {
+  const handleFormSubmit = async (ev) => {
     ev.preventDefault();
 
     const billingDetails = {
@@ -46,8 +47,8 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
         city: ev.target.city.value,
         line1: ev.target.address.value,
         state: ev.target.state.value,
-        postal_code: ev.target.zip.value
-      }
+        postal_code: ev.target.zip.value,
+      },
     };
 
     setProcessingTo(true);
@@ -62,7 +63,7 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
       const paymentMethodReq = await stripe.createPaymentMethod({
         type: "card",
         card: cardElement,
-        billing_details: billingDetails
+        billing_details: billingDetails,
       });
 
       if (paymentMethodReq.error) {
@@ -72,7 +73,7 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
       }
 
       const { error } = await stripe.confirmCardPayment(clientSecret, {
-        payment_method: paymentMethodReq.paymentMethod.id
+        payment_method: paymentMethodReq.paymentMethod.id,
       });
 
       if (error) {
@@ -105,22 +106,22 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
       fontSize: "16px",
       iconColor: "#fff",
       "::placeholder": {
-        color: "#87bbfd"
-      }
+        color: "#87bbfd",
+      },
     },
     invalid: {
       iconColor: "#FFC7EE",
-      color: "#FFC7EE"
+      color: "#FFC7EE",
     },
     complete: {
-      iconColor: "#cbf4c9"
-    }
+      iconColor: "#cbf4c9",
+    },
   };
 
   const cardElementOpts = {
     iconStyle: "solid",
     style: iframeStyles,
-    hidePostalCode: true
+    hidePostalCode: true,
   };
 
   return (

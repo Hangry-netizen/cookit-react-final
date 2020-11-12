@@ -11,7 +11,7 @@ import {
   FormGroup,
   Label,
   Input,
-  Alert
+  Alert,
 } from "reactstrap";
 import { url } from "../App";
 import { UncontrolledAlert } from "react";
@@ -27,9 +27,9 @@ export default function Login({ buttonLabel, className }) {
     toggleLogIn,
     toggleLoginModal,
     showLoginModal,
-    setLoggedIn
+    setLoggedIn,
   } = useContext(SessionContext);
- 
+
   //   let history = useHistory();
 
   const handleSubmit = (event) => {
@@ -98,7 +98,10 @@ export default function Login({ buttonLabel, className }) {
           </Form>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={() => handleSubmit()}>
+          <Button
+            style={{ backgroundColor: "#ff914d" }}
+            onClick={() => handleSubmit()}
+          >
             Login
           </Button>
           <Button color="secondary" onClick={toggleLoginModal}>

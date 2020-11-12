@@ -96,7 +96,10 @@ export default function SignUp({ className }) {
           </Form>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={() => handleSubmit()}>
+          <Button
+            style={{ backgroundColor: "#ff914d" }}
+            onClick={() => handleSubmit()}
+          >
             Sign Up
           </Button>
           <Button color="secondary" onClick={toggleSignUpModal}>

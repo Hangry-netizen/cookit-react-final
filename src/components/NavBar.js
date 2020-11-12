@@ -49,11 +49,11 @@ export default function NavBar() {
           height: "9vh",
           backgroundColor: "#555",
           opacity: "0.8",
-          fontSize: "20%",
+          fontSize: "",
         }}
         expand="md"
       >
-        <img style={{ height: "30px" }} src={logo} />
+        <img style={{ height: "120%" }} src={logo} />
         {adminLoggedIn ? (
           <NavLink className="inactive" onClick={handleAdminLogout}>
             Logout Admin
