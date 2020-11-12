@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import Confetti from "react-confetti";
 import { useState, useEffect } from "react";
 
-import Layout from "../components/Layout";
-import Row from "../components/prebuilt/Row";
+import Layout from "../PaymentComponents/Layout";
+import Row from "../PaymentComponents/prebuilt/Row";
 
 const Container = styled.div`
   width: 475px;
@@ -20,7 +20,7 @@ const Message = styled.div`
   margin-top: 40px;
 `;
 
-export default () => {
+const Success = () => {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
 
@@ -41,3 +41,5 @@ export default () => {
     </Layout>
   );
 };
+
+export default Success

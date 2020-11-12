@@ -19,7 +19,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "reactstrap": "^8.7.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "stripe": "^8.76.0"
   },
   "scripts": {
     "start": "react-scripts start",
