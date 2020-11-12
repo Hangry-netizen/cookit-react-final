@@ -103,7 +103,10 @@ function App() {
           <Route path="/admin" render={() => <AdminPage />} />
           <Route path="/testimonials" render={() => <TestimonialsPage />} />
           <Route path="/footer" render={() => <FooterPage />} />
-          <Route path="/payment" render={() => <PaymentPage />} />
+          <Route
+            path="/payment"
+            render={() => <PaymentPage checkoutMeal={checkoutMeal} />}
+          />
         </Switch>
       </SessionContext.Provider>
     </div>
