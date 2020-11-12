@@ -49,7 +49,7 @@ export default function IntroductionPage() {
                 data-icon="emojione:pot-of-food"
                 data-inline="false"
               ></span>
-              <CardText>
+              <CardText style={{ textAlign: "left" }}>
                 Forget about spending time in super markets and finding the
                 right ingredients. We have the perfect solution for you. All
                 year around we are there for you to deliver the finest
@@ -71,7 +71,7 @@ export default function IntroductionPage() {
                 data-inline="false"
               ></span>
 
-              <CardText>
+              <CardText style={{ textAlign: "left" }}>
                 In less than 30 minutes you could have access to ingredients
                 that will provide you with a healthy mix of nutrients and
                 amazing tastes. We work with the best suppliers of local organic
@@ -94,7 +94,7 @@ export default function IntroductionPage() {
                 data-inline="false"
               ></span>
 
-              <CardText>
+              <CardText style={{ textAlign: "left" }}>
                 The ingredienst we deliver are all local, organic and extrem
                 fresh. We source our meat only from animals that have been
                 raised without hormones or antibiotics. This makes for a better
@@ -115,7 +115,7 @@ export default function IntroductionPage() {
                 data-icon="fxemoji:deliverytruck"
                 data-inline="false"
               ></span>
-              <CardText>
+              <CardText style={{ textAlign: "left" }}>
                 Never buy ingredients again! We really mean that. Our service
                 include daily coverage. You can also choose to order more
                 flexibly if that's your style.
