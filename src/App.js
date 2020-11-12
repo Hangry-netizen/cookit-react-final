@@ -14,9 +14,9 @@ import AddMeal from "./components/AddMeal";
 import MealPage from "./pages/MealPage"
 import FooterPage from "./pages/FooterPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
-import PaymentPage from "./payments/PaymentPages/index";
+import PaymentPage from "./payments/PaymentPage";
 
-export const url = "https://cookit-cookit-cookit.herokuapp.com/api/v1";
+export const url = "http://127.0.0.1:5000/api/v1";
 
 function App() {
   const [name, setName] = useState();
