@@ -42,8 +42,8 @@ const TestimonialsPage = (props) => {
                   <CardText>
                     "Cookit is just amazing! A few months ago I started a new
                     company and just don't have any time to buy all the
-                    ingredients to cook. I feel blessed to have found Cookit which
-                    brought immense convenience to my life. Cookit is a
+                    ingredients to cook. I feel blessed to have found Cookit
+                    which brought immense convenience to my life. Cookit is a
                     life-saver and the meals are just delicious.""
                   </CardText>
                 </CardBody>
