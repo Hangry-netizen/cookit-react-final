@@ -45,6 +45,7 @@ export default function Login({ buttonLabel, className }) {
       .then((response) => {
         console.log(response.data);
         localStorage.setItem("jwt", response.data.auth_token);
+        localStorage.setItem("user_id", response.data.id)
         console.log(response.data.Error);
         if (response.data.Error !== "Invalid credentials") {
           toggleLoginModal();

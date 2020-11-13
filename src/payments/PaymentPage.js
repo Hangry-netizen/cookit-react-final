@@ -3,6 +3,7 @@ import "braintree-web";
 import axios from "axios";
 import DropIn from "braintree-web-drop-in-react";
 import { url } from "../App";
+import SessionContext from "../contexts/SessionContext";
 import {
   Jumbotron,
   Card,
@@ -17,6 +18,7 @@ import {
 import grab from "../assets/grab.png";
 
 class Payment extends Component {
+  // static contextType = SessionContext;
   instance;
 
   state = {
@@ -39,24 +41,28 @@ class Payment extends Component {
     try {
       // Send the nonce to your server
       const { nonce } = await this.instance.requestPaymentMethod();
+      // const { checkoutMeal } = this.context;
+      console.log(this.props.checkoutMeal);
       const response = await axios.post(`${url}/transactions/checkout`, {
         headers: {
           "Access-Control-Allow-Origin": "application/json",
         },
         payment_method_nonce: nonce,
-        numOfMeals: 2,
-        user: 2,
-        meal: 5,
+        numOfMeals: 1,
+        user: localStorage.getItem("user_id"),
+        meal: this.props.checkoutMeal.id,
       });
       console.log(response);
       // if response success then redirect
-      this.props.history.push('/success')
+      this.props.history.push("/success");
     } catch (err) {
       console.error(err);
     }
   }
 
   render() {
+    console.log(this.props.checkoutMeal.id);
+
     if (!this.state.clientToken) {
       return (
         <div style={{ paddingTop: "15%", textAlign: "center" }}>

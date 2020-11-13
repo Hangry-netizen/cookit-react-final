@@ -45,6 +45,7 @@ export default function Login({ buttonLabel, className }) {
         console.log(response.data.Error);
         if (response.data.Error !== "Invalid credentials") {
           localStorage.setItem("jwtAdmin", response.data.token);
+          localStorage.setItem("admin_id", response.data.id);
           toggleAdminModal();
           toggleAdminLogin();
           history.push("/admin");

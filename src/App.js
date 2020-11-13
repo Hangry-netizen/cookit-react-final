@@ -15,10 +15,10 @@ import MealPage from "./pages/MealPage";
 import FooterPage from "./pages/FooterPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import PaymentPage from "./payments/PaymentPage";
-import SuccessPage from "./payments/SuccessPage"
+import SuccessPage from "./payments/SuccessPage";
 
 export const url = "http://127.0.0.1:5000/api/v1";
-//  https://final-cookit.herokuapp.com/api/v1
+// export const url = "https://final-cookit.herokuapp.com/api/v1";
 
 function App() {
   const [name, setName] = useState();
@@ -108,7 +108,9 @@ function App() {
           <Route path="/success" render={() => <SuccessPage />} />
           <Route
             path="/payment"
-            render={(props) => <PaymentPage checkoutMeal={checkoutMeal} {...props}/>}
+            render={(props) => (
+              <PaymentPage checkoutMeal={checkoutMeal} {...props} />
+            )}
           />
         </Switch>
       </SessionContext.Provider>
