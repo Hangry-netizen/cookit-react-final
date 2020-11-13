@@ -49,6 +49,8 @@ class Payment extends Component {
         meal: 5,
       });
       console.log(response);
+      // if response success then redirect
+      this.props.history.push('/success')
     } catch (err) {
       console.error(err);
     }
