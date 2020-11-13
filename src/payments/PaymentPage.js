@@ -115,6 +115,8 @@ class Payment extends Component {
               width: "10vw",
               marginLeft: "2%",
               backgroundColor: "#ff914d",
+              border:"none",
+              color: "whitesmoke"
             }}
             onClick={this.buy.bind(this)}
           >
