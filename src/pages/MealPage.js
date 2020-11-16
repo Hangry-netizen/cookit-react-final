@@ -21,19 +21,18 @@ function MealPage() {
   return (
     <div>
       <Jumbotron
-        style={{ marginTop: "5%" }}
+        style={{ marginTop: "15%" }}
         className="text-center float-md-center"
       >
-        <h1 style={{ paddingBottom: "2%" }} className="display-3">
+        <h1
+          style={{ paddingBottom: "2%", fontSize: "200%" }}
+          className="display-3"
+        >
           Order Summary:{" "}
         </h1>
 
-        <Card style={{ width: "60vw", margin: "auto" }}>
-          <CardImg
-            style={{ height: "60vh" }}
-            src={checkoutMeal.url}
-            alt="Card image cap"
-          />
+        <Card style={{ width: "70vw", margin: "auto" }}>
+          <CardImg src={checkoutMeal.url} alt="Card image cap" />
           <CardBody>
             <CardTitle tag="h5">{checkoutMeal.name}</CardTitle>
             <CardSubtitle tag="h6" className="mb-2 text-muted">
