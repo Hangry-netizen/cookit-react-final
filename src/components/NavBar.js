@@ -48,34 +48,34 @@ export default function NavBar() {
         fixed="top"
         style={{
           height: "9vh",
-          backgroundColor: "#ff914d",
-          opacity: "0.6",
-          fontSize: "",
+          backgroundColor: "#6a6a6a",
+          //opacity: "0.6",
+          fontSize: ""
         }}
         expand="md"
       >
         <img style={{ height: "120%" }} src={logo} />
         {adminLoggedIn ? (
-          <NavLink className="inactive" onClick={handleAdminLogout}>
+          <NavLink className="inactive" id="link" onClick={handleAdminLogout}>
             Logout Admin
           </NavLink>
         ) : (
-          <NavLink className="inactive" onClick={toggleAdminModal}>
+          <NavLink className="inactive" id="link" onClick={toggleAdminModal}>
             Admin Login
           </NavLink>
         )}
 
         <Nav className="ml-auto">
           {loggedIn ? (
-            <NavLink className="inactive" onClick={handleUserLogout}>
+            <NavLink className="inactive" id="link" onClick={handleUserLogout}>
               Logout
             </NavLink>
           ) : (
             <>
-              <NavLink className="inactive" onClick={toggleLoginModal}>
+              <NavLink className="inactive" id="link" onClick={toggleLoginModal}>
                 Login
               </NavLink>
-              <NavLink className="inactive" onClick={toggleSignUpModal}>
+              <NavLink className="inactive" id="link" onClick={toggleSignUpModal}>
                 Sign Up
               </NavLink>
             </>

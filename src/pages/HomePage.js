@@ -55,7 +55,8 @@ export default function HomePage() {
             style={{
               backgroundColor: "#ff914d",
               marginRight: "1%",
-              color: "white",
+              color: "whitesmoke",
+              border:"none"
             }}
             className="inactive"
             onClick={toggleLoginModal}
@@ -67,7 +68,7 @@ export default function HomePage() {
         )}
         {!loggedIn ? (
           <Button
-            style={{ backgroundColor: "#ff914d", color: "white" }}
+            style={{ backgroundColor: "#ff914d", color: "whitesmoke", border:"none" }}
             className="inactive"
             onClick={toggleSignUpModal}
           >

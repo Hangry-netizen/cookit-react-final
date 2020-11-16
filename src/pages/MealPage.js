@@ -60,7 +60,7 @@ function MealPage() {
           )} */}
           </CardBody>
           <p className="lead">
-            <Button onClick={() => history.push(`/payment`)} color="primary">
+            <Button id="onHoverOrange" onClick={() => history.push(`/payment`)}>
               Process Payment
             </Button>
           </p>
