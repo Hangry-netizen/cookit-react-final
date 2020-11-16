@@ -13,12 +13,12 @@ export default function HeaderPage() {
         </h1>
 
         <p className="lead">
-          <Button href="#howItWorks" style={{ backgroundColor: "#ff914d" }}>
+          <Button href="#howItWorks" style={{ backgroundColor: "#ff914d", color: "whitesmoke", border: "none" }}>
             How it works
           </Button>
           <Button
             href="#meals"
-            style={{ backgroundColor: "#ff914d", marginLeft: "1%" }}
+            style={{ backgroundColor: "#ff914d", marginLeft: "1%", color: "whitesmoke", border: "none" }}
           >
             Start Cooking
           </Button>

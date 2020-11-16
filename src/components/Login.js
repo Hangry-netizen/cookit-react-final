@@ -100,7 +100,7 @@ export default function Login({ buttonLabel, className }) {
         </ModalBody>
         <ModalFooter>
           <Button
-            style={{ backgroundColor: "#ff914d" }}
+            style={{ backgroundColor: "#ff914d", border:"none", color: "whitesmoke" }}
             onClick={() => handleSubmit()}
           >
             Login

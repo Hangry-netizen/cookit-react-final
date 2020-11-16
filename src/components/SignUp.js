@@ -97,7 +97,7 @@ export default function SignUp({ className }) {
         </ModalBody>
         <ModalFooter>
           <Button
-            style={{ backgroundColor: "#ff914d" }}
+            style={{ backgroundColor: "#ff914d", border:"none", color: "whitesmoke" }}
             onClick={() => handleSubmit()}
           >
             Sign Up
