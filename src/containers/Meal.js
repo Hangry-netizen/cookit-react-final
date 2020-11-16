@@ -19,14 +19,14 @@ export default function Meal({ meal }) {
   );
 
   return (
-    <div style={{ width: "30vw", padding: "2%" }}>
+    <div style={{ width: "70vw", padding: "2%", margin: "auto" }}>
       <Card>
         <CardImg
-          style={{ height: "30vh" }}
+          // style={{ height: "60vh" }}
           src={meal.url}
           alt="Card image cap"
         />
-        <CardBody>
+        <CardBody style={{ height: "10%" }}>
           <CardTitle tag="h5">{meal.name}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">
             Preparation time: {meal.prep_time}
