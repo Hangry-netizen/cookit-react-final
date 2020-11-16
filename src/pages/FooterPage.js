@@ -12,7 +12,7 @@ const FooterPage = () => {
         paddingTop: "2%",
       }}
     >
-      <div style={{ padding: "0", margin: "0" }}>
+      <div style={{ padding: "0", margin: "0", textAlign: "center" }}>
         <ul>
           <li className="list-unstyled">
             <a className="a" href="#!">
@@ -70,15 +70,9 @@ const FooterPage = () => {
           </li>
         </ul>
 
-        <div
-          style={{
-            textAlign: "center",
-            backgroundColor: "#333",
-            paddingBottom: "1%",
-          }}
-        >
-          <p style={{ color: "#ff914d" }}>&#169; Copyright 2020 Cookit</p>
-        </div>
+        <p style={{ color: "#ff914d", padding: "auto" }}>
+          &#169; Copyright 2020 Cookit
+        </p>
       </div>
     </div>
   );
