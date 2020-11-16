@@ -48,7 +48,6 @@ export default function Login({ buttonLabel, className }) {
           localStorage.setItem("admin_id", response.data.id);
           toggleAdminModal();
           toggleAdminLogin();
-          history.push("/admin");
         }
       })
       .catch((error) => {
