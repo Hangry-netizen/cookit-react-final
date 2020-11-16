@@ -49,8 +49,8 @@ export default function NavBar() {
         style={{
           height: "9vh",
           backgroundColor: "#6a6a6a",
-          //opacity: "0.6",
-          fontSize: ""
+          opacity: "0.6",
+          fontSize: "",
         }}
         expand="md"
       >
@@ -72,10 +72,18 @@ export default function NavBar() {
             </NavLink>
           ) : (
             <>
-              <NavLink className="inactive" id="link" onClick={toggleLoginModal}>
+              <NavLink
+                className="inactive"
+                id="link"
+                onClick={toggleLoginModal}
+              >
                 Login
               </NavLink>
-              <NavLink className="inactive" id="link" onClick={toggleSignUpModal}>
+              <NavLink
+                className="inactive"
+                id="link"
+                onClick={toggleSignUpModal}
+              >
                 Sign Up
               </NavLink>
             </>
