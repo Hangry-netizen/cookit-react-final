@@ -15,8 +15,7 @@ import {
 } from "reactstrap";
 import { url } from "../App";
 import { UncontrolledAlert } from "react";
-
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function Login({ buttonLabel, className }) {
   const {
@@ -30,7 +29,7 @@ export default function Login({ buttonLabel, className }) {
     setLoggedIn,
   } = useContext(SessionContext);
 
-  //   let history = useHistory();
+  let history = useHistory();
 
   const handleSubmit = (event) => {
     console.log(`Name: ${name}, Password: ${password}`);
@@ -44,10 +43,11 @@ export default function Login({ buttonLabel, className }) {
     })
       .then((response) => {
         console.log(response.data);
-        localStorage.setItem("jwt", response.data.auth_token);
-        localStorage.setItem("user_id", response.data.id)
+        
         console.log(response.data.Error);
         if (response.data.Error !== "Invalid credentials") {
+          localStorage.setItem("jwt", response.data.auth_token);
+          localStorage.setItem("user_id", response.data.id);
           toggleLoginModal();
           toggleLogIn();
         }

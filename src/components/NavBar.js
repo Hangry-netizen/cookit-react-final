@@ -34,8 +34,7 @@ export default function NavBar() {
   const handleUserLogout = () => {
     localStorage.removeItem("jwt");
     localStorage.removeItem("user_id");
-    setLoggedIn(false);
-    history.push("/");
+    setLoggedIn(false)
   };
 
   return (
@@ -54,8 +53,8 @@ export default function NavBar() {
         }}
         expand="md"
       >
-        <img style={{ height: "120%" }} src={logo} />
-        {adminLoggedIn ? (
+        <NavLink to="/" img style={{ height: "120%" }} src={logo} ></NavLink>
+        {localStorage.getItem('jwtAdmin') ? (
           <NavLink className="inactive" id="link" onClick={handleAdminLogout}>
             Logout Admin
           </NavLink>
@@ -66,7 +65,7 @@ export default function NavBar() {
         )}
 
         <Nav className="ml-auto">
-          {loggedIn ? (
+          {localStorage.getItem('jwt') ? (
             <NavLink className="inactive" id="link" onClick={handleUserLogout}>
               Logout
             </NavLink>
