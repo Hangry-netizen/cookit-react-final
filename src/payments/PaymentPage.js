@@ -65,47 +65,22 @@ class Payment extends Component {
 
     if (!this.state.clientToken) {
       return (
-        <div style={{ paddingTop: "15%", textAlign: "center" }}>
+        <div style={{ paddingTop: "20%", textAlign: "center" }}>
           <h1>Loading...</h1>
         </div>
       );
     } else {
       return (
-        <div style={{ paddingTop: "5%" }}>
-          {/* <Card style={{ width: "60vw", margin: "auto", border: "0" }}>
-            <CardBody>
-              <img src={this.props.checkoutMeal.url} />
-
-              <CardTitle tag="h5">{this.props.checkoutMeal.name}</CardTitle>
-              <CardSubtitle tag="h6" className="mb-2 text-muted">
-                Preparation time: {this.props.checkoutMeal.prep_time}
-              </CardSubtitle>
-
-              <CardText>
-                Cookware required:
-                {this.props.checkoutMeal.cookware}
-              </CardText>
-
-              <CardTitle tag="h1">15 MYR</CardTitle>
-            </CardBody>
-          </Card> */}
+        <div style={{ paddingTop: "20%", textAlign: "center" }}>
           <div
             style={{
-              display: "flex",
-              justifyContent: "space-between",
               padding: "2%",
             }}
           >
-            <div>
+            <div style={{ textAlign: "center" }}>
               <h1>1 x {this.props.checkoutMeal.name}</h1>
               <h3>Total Payment: 15 RM</h3>
-              <h5>
-                Please pay with Credit/Debit Card or scan Grab Wallet QR Code
-              </h5>
-            </div>
-
-            <div>
-              <img style={{ width: "40%" }} src={grab} />
+              <h5>Please pay with Credit/Debit Card</h5>
             </div>
           </div>
           <DropIn
@@ -118,11 +93,11 @@ class Payment extends Component {
           <Button
             style={{
               marginBottom: "5%",
-              width: "10vw",
+              width: "30vw",
               marginLeft: "2%",
               backgroundColor: "#ff914d",
-              border:"none",
-              color: "whitesmoke"
+              border: "none",
+              color: "whitesmoke",
             }}
             onClick={this.buy.bind(this)}
           >
