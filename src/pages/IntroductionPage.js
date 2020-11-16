@@ -36,9 +36,12 @@ export default function IntroductionPage() {
 
         <Container
           style={{ paddingTop: "3%", fontColor: "grey" }}
-          className="d-flex "
+          className="d-flex flex-wrap"
         >
-          <Card style={{ textAlign: "center" }} className="border-0">
+          <Card
+            style={{ minWidth: "50px", textAlign: "center" }}
+            className="border-0"
+          >
             <CardBody>
               <CardTitle tag="h3">Available All Year</CardTitle>
               <span

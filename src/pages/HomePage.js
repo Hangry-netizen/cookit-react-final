@@ -7,7 +7,7 @@ import HeaderPage from "./HeaderPage";
 import FooterPage from "./FooterPage";
 import HowItWorks from "../pages/HowItWorks";
 import IntroductionPage from "../pages/IntroductionPage";
-import UpdateTestimonialPage from "../pages/UpdateTestimonialPage";
+import TestimonialsPage from "./TestimonialsPage";
 import { Button } from "reactstrap";
 
 export default function HomePage() {
@@ -40,7 +40,7 @@ export default function HomePage() {
       <HeaderPage />
       <IntroductionPage />
       <HowItWorks />
-      <UpdateTestimonialPage />
+      <TestimonialsPage />
       <div
         style={{
           margin: "auto",
@@ -76,14 +76,7 @@ export default function HomePage() {
         ) : (
           ""
         )}
-        <div
-          id="meals"
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-          }}
-        >
+        <div id="meals">
           {meals.map((meal) => {
             return <Meal meal={meal} />;
           })}
