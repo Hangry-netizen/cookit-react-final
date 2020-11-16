@@ -26,12 +26,14 @@ export default function NavBar() {
 
   const handleAdminLogout = () => {
     localStorage.removeItem("jwtAdmin");
+    localStorage.removeItem("admin_id");
     setAdminLoggedIn(false);
     history.push("/");
   };
 
   const handleUserLogout = () => {
     localStorage.removeItem("jwt");
+    localStorage.removeItem("user_id");
     setLoggedIn(false);
     history.push("/");
   };
